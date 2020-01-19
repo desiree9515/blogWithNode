@@ -1,0 +1,42 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+
+{{/each}}
+<h3>Editar Postagem: </h3>
+<hr>
+<form action="/admin/postagens/edit" method="POST">
+<input type="hidden" name="id" value="{{postagem._id}}">
+    <labe for="nome">Título: </labe>
+        <input class="form-control" type="text" id="titulo" name="titulo" placeholder="Título da postagem" value="{{postagem.titulo}}">
+    <label for="slug">Slug da postagem: </label>
+        <input class="form-control" type="text" id="slug" name="slug" placeholder="Slug da postagem">
+    <label for="slug">Descrição da postagem: </label>
+        <input class="form-control" type="text" id="descricao" name="descricao" placeholder="Descrição da postagem" value="{{postagem.descricao}}">
+    <label for="slug">Conteúdo da postagem: </label>
+        <textarea class="form-control" id="conteudo" name="conteudo" value="{{postagem.conteudo}}">{{postagem.conteudo}}</textarea>    
+    <label for="slug">Categoria: </label>
+        <select class="custom-select" id="categoria" name="categoria">
+            {{#each categorias}}
+                <option value="{{_id}}">{{nome}}</option>
+            {{else}}
+                <option value="">Nenhuma categoria registrada</option>
+            {{/each}}
+        </select>
+        <br>
+    <button class="btn btn-success mt-4">Editar Postagem</button>
+</form>
+
+
+{{!-- Fixar categoria no option --}}
+<script>
+document.body.onload = new function(){
+    var categoria = document.getElementById('categoria')
+    var categoriaPost = "{{postagem.categoria._id}}"
+    var categoriaValue = categoria.options[0].value
+    while (categoriaValue != categoriaPost){
+        categoria.selectedIndex++
+        categoriaValue=categoria.options[categoria.selectedIndex].value
+    }
+}
+</script>

@@ -1,0 +1,188 @@
+* {
+    margin:0;
+    padding:0
+}
+
+body {
+    background-color: #eee;
+}
+
+footer {
+    margin-top: 450px;
+}
+
+hr {
+    background:#dedede;
+    border:0;
+    height:1px;
+}
+
+#perfil {
+    margin: 40px 0;
+  }
+  
+#perfil_img {
+    margin: 0 auto;
+    display: block;
+    width: 315px;
+    height: 315px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.cat-name {
+    color: #666;
+}
+
+.cat-name:hover {
+    color: #666;
+    text-decoration: none;
+}
+
+.card {
+    border:1px solid #dedede;
+    box-shadow: 5px 10px #d8d8d8;
+    margin: 0 auto;
+    display: block;
+    width: 750px;
+}
+
+.card-categoria {
+    border:1px solid #dedede;
+    box-shadow: 5px 10px #d8d8d8;
+    margin: 0 auto;
+    display: block;
+    width: 300px;
+}
+
+.card-categoria:hover {
+    opacity:1;
+    background-color: #ecd0d0;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.registro, .login {
+    border:1px solid #dedede;
+    box-shadow: 5px 10px #d8d8d8;
+    margin: 0 auto;
+    display: block;
+    width: 350px;
+    text-align: center;
+}
+
+.registro:hover, .login:hover {
+    opacity:1;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card h4, .tituloPost, .tituloCategoria {
+    margin:0 0 15px;
+    padding:0;
+    font-family: Georgia;
+    font-weight: normal;
+    color: #666;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 35px;
+    font-family: Georgia;
+    font-weight: normal;
+    color: rgb(77, 74, 74);
+}
+
+.subtitulo {
+    max-width: 550px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #666;
+}
+
+.categoria {
+    float: right;
+    text-transform: uppercase;
+}
+
+.data {
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.conteudo {
+    color: rgb(126, 125, 125);
+    font-size: 20px;
+}
+
+.post {
+    margin: 0 auto;
+    display: block;
+    width: 650px;
+}
+
+@media screen and (min-device-width: 360px) and (max-device-width: 768px)
+{
+    .card {
+        border:1px solid #dedede;
+        box-shadow: 5px 10px #d8d8d8;
+        margin: 0 auto;
+        display: block;
+        width: 300px;
+    }
+
+    .post {
+        margin: 0 auto;
+        display: block;
+        width: 350px;
+    }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) 
+{
+    .card {
+        border:1px solid #dedede;
+        box-shadow: 5px 10px #d8d8d8;
+        margin: 0 auto;
+        display: block;
+        width: 600px;
+    }
+
+    .post {
+        margin: 0 auto;
+        display: block;
+        width: 750px;
+    }
+}
+
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .card {
+        border:1px solid #dedede;
+        box-shadow: 5px 10px #d8d8d8;
+        margin: 0 auto;
+        display: block;
+        width: 600px;
+    }
+
+    .post {
+        margin: 0 auto;
+        display: block;
+        width: 750px;
+    }
+
+}
+
+/* Editar algo apenas no firefox */
+/* @-moz-document url-prefix() {
+    footer {
+        position: fixed;;
+        bottom:0;
+        width: 100%;
+    }
+} */

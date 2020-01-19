@@ -1,0 +1,14 @@
+<div class="post container body-content">
+<h1 class="tituloCategoria text-center">Categorias:</h1>
+<hr>
+    {{#each categorias}}
+        <div class="card card-categoria text-center mt-4">
+            <div class="card-body">
+                <a class="cat-name" href="/categorias/{{slug}}"><h5>{{nome}}</h5></a>
+            </div>
+        </div>
+    {{else}}
+        <h4 class="mt-3">Nenhuma categoria registrada</h4>
+    {{/each}}
+</div>
+<br/><br/>
